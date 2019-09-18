@@ -1,20 +1,30 @@
 import React from "react"
-import { Link } from "gatsby"
+import Fade from "react-reveal/Fade"
 
+import "bootstrap/dist/css/bootstrap.min.css"
+import "./index.css"
 import Layout from "../components/layout"
-import Image from "../components/image"
 import SEO from "../components/seo"
 
+import { Link } from "gatsby"
+
 const IndexPage = () => (
-  <Layout>
+  <Layout className="svg-bg">
     <SEO title="Home" />
-    <h1>Hi people</h1>
-    <p>Welcome to your new Gatsby site.</p>
-    <p>Now go build something great.</p>
-    <div style={{ maxWidth: `300px`, marginBottom: `1.45rem` }}>
-      <Image />
+    <div className="container home text-center">
+      <Fade>
+        <h1 className="display-1 ">
+          Hello there<span>,</span>
+        </h1>
+      </Fade>
+      <Fade bottom>
+        <h4>I'm Zubayr Ali, React developer, AWS solutions architect.</h4>
+        <div className="mt-4 subnav">
+          <a href="">Read Resume</a>, &nbsp;
+          <Link to="/projects">View Projects &rarr; </Link>
+        </div>
+      </Fade>
     </div>
-    <Link to="/page-2/">Go to page 2</Link>
   </Layout>
 )
 

@@ -1,0 +1,17 @@
+.blog_title {
+  font-size: 20px !important;
+  text-decoration: none !important;
+  color: #1ec503 !important;
+}
+.blog_title img {
+  width: 50%;
+  height: auto;
+}
+.blog_title h4 {
+  font-size: 18px;
+  color: #fff !important;
+}
+
+.blog_title h4:hover {
+  text-decoration: underline;
+}

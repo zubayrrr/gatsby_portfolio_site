@@ -1,0 +1,58 @@
+.nav-link {
+  font-family: "pokemon";
+  color: #fff !important;
+}
+.navbar-brand {
+  color: #fff !important;
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  font-size: 28px !important;
+}
+
+.navbar-brand span {
+  color: #1ec503;
+}
+
+.nav-link {
+  font-size: 14px;
+  color: #1ec503 !important;
+}
+
+.nav-link:hover,
+.nav-link:focus {
+  color: #fff !important;
+  animation: flicker 1s infinite alternate;
+}
+
+:root {
+  --neon-text-color: #1ec503;
+  --neon-border-color: #1ec503;
+}
+
+/* Animate neon flicker */
+@keyframes flicker {
+  0%,
+  19%,
+  21%,
+  23%,
+  25%,
+  54%,
+  56%,
+  100% {
+    text-shadow: -0.2rem -0.2rem 1rem #000, 0.2rem 0.2rem 1rem #1ec503,
+      0 0 2rem var(--neon-text-color), 0 0 4rem var(--neon-text-color),
+      0 0 6rem var(--neon-text-color), 0 0 8rem var(--neon-text-color);
+  }
+
+  20%,
+  24%,
+  55% {
+    text-shadow: none;
+    box-shadow: none;
+  }
+}
+
+.navbar-light .navbar-toggler-icon {
+  background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAQAAAD9CzEMAAAAAmJLR0QA/4ePzL8AAAArSURBVFjD7dQxDQAACASx928aNJCwQFoDt10CPFLLBOYBwCq8CLxIADivAfXHvG5HNqGfAAAAAElFTkSuQmCC") !important;
+}
