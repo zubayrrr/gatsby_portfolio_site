@@ -1,12 +1,3 @@
-exports.onCreateWebpackConfig = ({ stage, actions }) => {
-  switch (stage) {
-    case `build-javascript`:
-      actions.setWebpackConfig({
-        plugins: [webpackFooPlugin],
-      })
-  }
-}
-
 const { createFilePath } = require("gatsby-source-filesystem")
 const path = require("path")
 exports.onCreateNode = ({ node, getNode, actions }) => {
