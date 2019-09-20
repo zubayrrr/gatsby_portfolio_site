@@ -1,7 +1,6 @@
 import React from "react"
 import { useStaticQuery, graphql } from "gatsby"
 import { Scrollbars } from "react-custom-scrollbars"
-import Fade from "react-reveal/Fade"
 import "./layout.css"
 import Navigation from "./Globals/Navigation"
 
@@ -25,6 +24,7 @@ const Layout = ({ children }) => {
         )}
       >
         <Navigation pageWrapId={"page-wrap"} outerContainerId={"App"} />
+
         <div id="page-wrap">{children}</div>
       </Scrollbars>
     </div>
