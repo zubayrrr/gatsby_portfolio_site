@@ -15,7 +15,7 @@ export default class about extends Component {
       <Layout>
         <div className="about">
           <BackgroundSection
-            title=" "
+            title="About me"
             styleClass="about-background"
             img={this.state.BackgroundSection.fluid}
           />
