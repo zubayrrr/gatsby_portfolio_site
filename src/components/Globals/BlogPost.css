@@ -1,6 +1,13 @@
+body {
+  overflow-x: hidden;
+}
 .blogpost_img {
-  width: 80vw;
-  height: 80vh;
+  width: 90%;
+  height: auto;
+}
+
+.blogpost h1 {
+  color: #1ec503;
 }
 
 .blogpost_content p {
@@ -11,4 +18,13 @@
 .blogpost_content img {
   width: 50%;
   height: auto;
+}
+
+@media (max-width: 576px) {
+  .blogpost_content p {
+    text-align: left !important;
+  }
+  .blogpost h1 {
+    text-align: left !important;
+  }
 }
