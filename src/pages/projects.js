@@ -4,8 +4,8 @@ import SEO from "../components/seo"
 import { graphql } from "gatsby"
 import { Card, Row, Container } from "react-bootstrap"
 import Fade from "react-reveal/Fade"
-
 import "./projects.css"
+import BackgroundSection from "../components/Globals/BackgroundSection"
 
 const getCategories = items => {
   let tempItems = items
@@ -23,11 +23,11 @@ const getCategories = items => {
 export default class projects extends Component {
   constructor({ data }) {
     super({ data })
-    console.log(data.menu.edges)
     this.state = {
       items: data.menu.edges,
       projects: data.menu.edges,
       categories: getCategories(data.menu.edges),
+      BackgroundSection: data.BackgroundSection.childImageSharp,
     }
   }
 
@@ -50,8 +50,12 @@ export default class projects extends Component {
       return (
         <Layout>
           <SEO title="Projects" />
+          <BackgroundSection
+            title="Projects that I've worked on"
+            styleClass="background-section-blog"
+            img={this.state.BackgroundSection.fluid}
+          />
           <div className="projects">
-            <h1 className="text-center my-4">Projects that I've worked on.</h1>
             <Container>
               <Row className="mb-5">
                 <Fade>
@@ -163,6 +167,14 @@ export const query = graphql`
               src
             }
           }
+        }
+      }
+    }
+
+    BackgroundSection: file(relativePath: { eq: "projects-bg.jpg" }) {
+      childImageSharp {
+        fluid {
+          ...GatsbyImageSharpFluid
         }
       }
     }

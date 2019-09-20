@@ -21,6 +21,11 @@ export default class Navigation extends Component {
         path: "/blog",
         text: "blog",
       },
+      {
+        id: 4,
+        path: "/about",
+        text: "about",
+      },
     ],
   }
   render() {

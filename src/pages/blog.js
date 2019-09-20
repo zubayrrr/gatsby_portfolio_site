@@ -1,21 +1,17 @@
 import React, { Component } from "react"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
-import { Container, Row } from "react-bootstrap"
-import { Link } from "gatsby"
+import { Container } from "react-bootstrap"
+import { graphql } from "gatsby"
 import "./blog.css"
-import BlogHeader from "../components/Globals/BlogHeader"
-
-if (typeof window !== "undefined") {
-  require("smooth-scroll")('a[href*="#"]')
-}
+import BackgroundSection from "../components/Globals/BackgroundSection"
 
 export default class blog extends Component {
   constructor({ data }) {
     super(data)
-    console.log(data.allWordpressPost)
     this.state = {
       posts: data.allWordpressPost.nodes,
+      BackgroundSection: data.BackgroundSection.childImageSharp,
     }
   }
 
@@ -23,7 +19,11 @@ export default class blog extends Component {
     return (
       <Layout>
         <SEO title="Blog" />
-        <BlogHeader />
+        <BackgroundSection
+          title="<Blog Articles />"
+          styleClass="background-section-blog"
+          img={this.state.BackgroundSection.fluid}
+        />
         <Container>
           <div>
             {this.state.posts
@@ -79,6 +79,14 @@ export const query = graphql`
         title
         excerpt
         content
+      }
+    }
+
+    BackgroundSection: file(relativePath: { eq: "blog-bg.jpg" }) {
+      childImageSharp {
+        fluid {
+          ...GatsbyImageSharpFluid
+        }
       }
     }
   }
