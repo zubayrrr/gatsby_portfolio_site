@@ -1,12 +1,13 @@
 import React, { Component } from "react"
 import headerImg from "../../images/headerImg.jpg"
+import "./BlogHeader.css"
 
-export default class Blog_header extends Component {
+export default class BlogHeader extends Component {
   render() {
     return (
       <header
         class="masthead"
-        style={{ backgroundImage: `url('${headerImg}')`, height: "500px" }}
+        style={{ backgroundImage: `url('${headerImg}')` }}
       >
         <div class="overlay" />
         <div class="container">

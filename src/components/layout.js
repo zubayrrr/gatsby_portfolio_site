@@ -17,17 +17,17 @@ const Layout = ({ children }) => {
   `)
 
   return (
-    <Scrollbars
-      style={{ height: "100vh" }}
-      renderTrackHorizontal={props => (
-        <div {...props} className="track-horizontal" />
-      )}
-    >
-      <Fade top>
-        <Navigation />
-      </Fade>
-      {children}
-    </Scrollbars>
+    <div id="App">
+      <Scrollbars
+        style={{ height: "100vh" }}
+        renderTrackHorizontal={props => (
+          <div {...props} className="track-horizontal" />
+        )}
+      >
+        <Navigation pageWrapId={"page-wrap"} outerContainerId={"App"} />
+        <div id="page-wrap">{children}</div>
+      </Scrollbars>
+    </div>
   )
 }
 

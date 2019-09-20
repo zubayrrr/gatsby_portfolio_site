@@ -4,6 +4,7 @@ import SEO from "../components/seo"
 import { Container, Row } from "react-bootstrap"
 import { Link } from "gatsby"
 import "./blog.css"
+import BlogHeader from "../components/Globals/BlogHeader"
 
 if (typeof window !== "undefined") {
   require("smooth-scroll")('a[href*="#"]')
@@ -22,8 +23,8 @@ export default class blog extends Component {
     return (
       <Layout>
         <SEO title="Blog" />
-        <Container id="top">
-          {/* <Row className="mb-5"> */}
+        <BlogHeader />
+        <Container>
           <div>
             {this.state.posts
               .slice(0)
@@ -60,7 +61,6 @@ export default class blog extends Component {
                 )
               })}
           </div>
-          {/* </Row> */}
         </Container>
       </Layout>
     )

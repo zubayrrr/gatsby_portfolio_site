@@ -1,7 +1,7 @@
 import React, { Component } from "react"
 import { Link } from "gatsby"
-import { Navbar, Nav, Container } from "react-bootstrap"
 import "./Navigation.css"
+import { slide as Menu } from "react-burger-menu"
 
 export default class Navigation extends Component {
   state = {
@@ -25,31 +25,32 @@ export default class Navigation extends Component {
   }
   render() {
     return (
-      <Container>
-        <Navbar expand="lg" className="my-5">
-          <Navbar.Brand>
-            <Link to="/" className="navbar-brand">
-              ZUbayr<span>Ali</span>
-            </Link>
-          </Navbar.Brand>
-          <Navbar.Toggle aria-controls="basic-navbar-nav" />
-          <Navbar.Collapse id="basic-navbar-nav">
-            <Nav className="ml-auto">
-              {this.state.links.map(link => {
-                return (
-                  <Link
-                    className="nav-link text-capitalize"
-                    key={link.id}
-                    to={link.path}
-                  >
-                    {link.text}
-                  </Link>
-                )
-              })}
-            </Nav>
-          </Navbar.Collapse>
-        </Navbar>
-      </Container>
+      <>
+        <Menu
+          {...this.props}
+          style={{ zIndex: "10000000000000000000000000000" }}
+          right
+          customBurgerIcon={
+            <img
+              style={{ width: "20px" }}
+              src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAABmJLR0QA/wD/AP+gvaeTAAAAKklEQVRIiWNgGOqAUe4o839aWsBES8NHwSgYImA0o42CUUAHMJrRBh4AACLHBbnKcZ5AAAAAAElFTkSuQmCC"
+            />
+          }
+          width={"280px"}
+        >
+          {this.state.links.map(link => {
+            return (
+              <Link
+                className="nav-link text-capitalize"
+                key={link.id}
+                to={link.path}
+              >
+                {link.text}
+              </Link>
+            )
+          })}
+        </Menu>
+      </>
     )
   }
 }
