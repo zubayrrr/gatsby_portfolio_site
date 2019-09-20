@@ -50,82 +50,87 @@ export default class projects extends Component {
       return (
         <Layout>
           <SEO title="Projects" />
-          <h1 className="text-center my-4">Projects that I've worked on.</h1>
-          <Container>
-            <Row className="mb-5">
-              <Fade>
-                <div className="col-10 mx-auto text-center categories">
-                  {this.state.categories.map((category, index) => {
+          <div className="projects">
+            <h1 className="text-center my-4">Projects that I've worked on.</h1>
+            <Container>
+              <Row className="mb-5">
+                <Fade>
+                  <div className="col-10 mx-auto text-center categories">
+                    {this.state.categories.map((category, index) => {
+                      return (
+                        <button
+                          className="btn-green"
+                          key={index}
+                          onClick={() => {
+                            this.handleItems(category)
+                          }}
+                        >
+                          {category}
+                        </button>
+                      )
+                    })}
+                  </div>
+                </Fade>
+              </Row>
+              <Row className="pb-5 mb-5">
+                {this.state.projects
+                  .slice(0)
+                  .reverse()
+                  .map(({ node }) => {
                     return (
-                      <button
-                        className="btn-green"
-                        key={index}
-                        onClick={() => {
-                          this.handleItems(category)
-                        }}
-                      >
-                        {category}
-                      </button>
+                      <Fade>
+                        <div
+                          key={node.id}
+                          className="col-11 col-md-4 my-3 d-flex mx-auto"
+                        >
+                          <Card key={node.id}>
+                            <Card.Img
+                              variant="top"
+                              src={node.image.fixed.src}
+                            />
+                            <Card.Body>
+                              <Card.Title className="text-green text-center">
+                                {node.title}
+                              </Card.Title>
+                              <Card.Text>
+                                {node.description.description}
+                              </Card.Text>
+                              <div>
+                                <a
+                                  className="text-white"
+                                  title="Visit"
+                                  target="_blank"
+                                  rel="noopener noreferrer"
+                                  href={node.hyperlink}
+                                >
+                                  <img
+                                    alt={node.description}
+                                    src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABwAAAAcCAQAAADYBBcfAAAAAmJLR0QA/4ePzL8AAACcSURBVDjLY2AYQeB/wv+ZRMAETI3z/xMD5mPXaPdfCQ+0w61RAa9nFIjQ+F/7vwsKFCRWI7qPHYjVGPq/Awwn/P9JkkaoGMf/nUDRHyRq/M/+fwtQbCfQXlI0wrVx/m8gxY9wbUA28RqRtZGgERokO/9zQGV8gWlUjaBGVNtISDn/5yLbRopGBaBWDrLTKqkayc5WZGVkcouOYQwAXHPF7f2PBrwAAAAASUVORK5CYII="
+                                  />{" "}
+                                </a>
+                                &nbsp;
+                                <a
+                                  className="text-white"
+                                  title="Github"
+                                  target="_blank"
+                                  rel="noopener noreferrer"
+                                  href={node.github}
+                                >
+                                  <img
+                                    alt={node.description}
+                                    src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABwAAAAcCAQAAADYBBcfAAAAAmJLR0QA/4ePzL8AAAFESURBVDgR5cHNSlRxHADQ34RQM7RqFS3a2KZ0VRsRZ9euQCwzSkIo2/ThwuFKTxJE01MUPobW0mGcxGXgpoS5CHFq+F/pOt4rbaNz4p9n2rJ165ZNxd/RlOkr6+u4EGcza1+VPTNRz5JcnaHFqGZWjgOHxh06wNBMnKZp38i8ljU7NnV1bdrxWtOCka/OxziZ5GZUcEvSiXH6krtRwR1JL04yLflsIiqY8EVyI8o8lryKGtYkj6JMR3Ivargv6USZTPI0anguyaLMiuRd1PBe8iTKTEm+uxwVXPFDcj3KNOxJtkzGGNdsSwYacZINfLBi6MhHmUb85pw3PjlyrBPjtAzw0kM/8TYKuv7Y1YzTtOW+uWTSbRej4IVjubmo5oHctiVtV6PgmSS3GPW0DYysRsGqkV1zcTYtG3rmo2BBT6YV/6FfzEDALqjVecAAAAAASUVORK5CYII="
+                                  />
+                                </a>
+                              </div>
+                            </Card.Body>
+                          </Card>
+                        </div>
+                      </Fade>
                     )
                   })}
-                </div>
-              </Fade>
-            </Row>
-            <Row className="pb-5 mb-5">
-              {this.state.projects
-                .slice(0)
-                .reverse()
-                .map(({ node }) => {
-                  return (
-                    <Fade>
-                      <div
-                        key={node.id}
-                        className="col-11 col-md-4 my-3 d-flex mx-auto"
-                      >
-                        <Card key={node.id}>
-                          <Card.Img variant="top" src={node.image.fixed.src} />
-                          <Card.Body>
-                            <Card.Title className="text-green text-center">
-                              {node.title}
-                            </Card.Title>
-                            <Card.Text>
-                              {node.description.description}
-                            </Card.Text>
-                            <div>
-                              <a
-                                className="text-white"
-                                title="Visit"
-                                target="_blank"
-                                rel="noopener noreferrer"
-                                href={node.hyperlink}
-                              >
-                                <img
-                                  alt={node.description}
-                                  src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABwAAAAcCAQAAADYBBcfAAAAAmJLR0QA/4ePzL8AAACcSURBVDjLY2AYQeB/wv+ZRMAETI3z/xMD5mPXaPdfCQ+0w61RAa9nFIjQ+F/7vwsKFCRWI7qPHYjVGPq/Awwn/P9JkkaoGMf/nUDRHyRq/M/+fwtQbCfQXlI0wrVx/m8gxY9wbUA28RqRtZGgERokO/9zQGV8gWlUjaBGVNtISDn/5yLbRopGBaBWDrLTKqkayc5WZGVkcouOYQwAXHPF7f2PBrwAAAAASUVORK5CYII="
-                                />{" "}
-                              </a>
-                              &nbsp;
-                              <a
-                                className="text-white"
-                                title="Github"
-                                target="_blank"
-                                rel="noopener noreferrer"
-                                href={node.github}
-                              >
-                                <img
-                                  alt={node.description}
-                                  src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABwAAAAcCAQAAADYBBcfAAAAAmJLR0QA/4ePzL8AAAFESURBVDgR5cHNSlRxHADQ34RQM7RqFS3a2KZ0VRsRZ9euQCwzSkIo2/ThwuFKTxJE01MUPobW0mGcxGXgpoS5CHFq+F/pOt4rbaNz4p9n2rJ165ZNxd/RlOkr6+u4EGcza1+VPTNRz5JcnaHFqGZWjgOHxh06wNBMnKZp38i8ljU7NnV1bdrxWtOCka/OxziZ5GZUcEvSiXH6krtRwR1JL04yLflsIiqY8EVyI8o8lryKGtYkj6JMR3Ivargv6USZTPI0anguyaLMiuRd1PBe8iTKTEm+uxwVXPFDcj3KNOxJtkzGGNdsSwYacZINfLBi6MhHmUb85pw3PjlyrBPjtAzw0kM/8TYKuv7Y1YzTtOW+uWTSbRej4IVjubmo5oHctiVtV6PgmSS3GPW0DYysRsGqkV1zcTYtG3rmo2BBT6YV/6FfzEDALqjVecAAAAAASUVORK5CYII="
-                                />
-                              </a>
-                            </div>
-                          </Card.Body>
-                        </Card>
-                      </div>
-                    </Fade>
-                  )
-                })}
-            </Row>
-          </Container>
+              </Row>
+            </Container>
+          </div>
         </Layout>
       )
     } else {

@@ -17,6 +17,10 @@
   color: #1ec503;
 }
 
+.projects {
+  margin-top: 100px;
+}
+
 button {
   background: none;
   color: #1ec503;
@@ -83,6 +87,9 @@ button:focus {
 }
 
 @media (max-width: 576px) {
+  .projects {
+    margin-top: 130px;
+  }
   h1 {
     font-size: 23px;
   }

@@ -1,3 +1,9 @@
 .masthead {
   height: 80vh;
 }
+
+.site-heading {
+}
+.text-pokemon {
+  font-family: "pokemon";
+}
