@@ -2,6 +2,7 @@ import React, { Component } from "react"
 import Layout from "../components/layout"
 import "./about.css"
 import BackgroundSection from "../components/Globals/BackgroundSection"
+import SEO from "../components/seo"
 
 export default class about extends Component {
   constructor({ data }) {
@@ -13,6 +14,8 @@ export default class about extends Component {
   render() {
     return (
       <Layout>
+        <SEO title="About" />
+
         <div className="about">
           <BackgroundSection
             title="About me"
