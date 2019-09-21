@@ -76,6 +76,7 @@ export default class projects extends Component {
                   </div>
                 </Fade>
               </Row>
+
               <Row className="pb-5 mb-5">
                 {this.state.projects
                   .slice(0)
@@ -85,9 +86,36 @@ export default class projects extends Component {
                       <Fade>
                         <div
                           key={node.id}
-                          className="col-11 col-md-4 my-3 d-flex mx-auto"
+                          className="col-11 col-md-4 my-3 d-flex mx-auto  "
                         >
-                          <Card key={node.id}>
+                          <div class="post-module hover">
+                            <div class="thumbnail">
+                              <img src={node.image.fixed.src} />
+                            </div>
+
+                            <div class="post-content">
+                              <div class="category">{node.category}</div>
+                              <h1 class="title">{node.title}</h1>
+                              <h4 class="description">
+                                {node.description.description}
+                              </h4>
+
+                              <div class="post-meta">
+                                <span class="timestamp">
+                                  <a href="www.netlify.com">
+                                    <img src="https://img.icons8.com/material-two-tone/24/000000/external-link.png" />
+                                  </a>
+                                </span>
+                                <span class="comments">
+                                  <a href="www.github.com">
+                                    <img src="https://img.icons8.com/material-outlined/24/000000/github.png" />{" "}
+                                  </a>
+                                </span>
+                              </div>
+                            </div>
+                          </div>
+
+                          {/* <Card key={node.id}>
                             <Card.Img
                               variant="top"
                               src={node.image.fixed.src}
@@ -127,7 +155,7 @@ export default class projects extends Component {
                                 </a>
                               </div>
                             </Card.Body>
-                          </Card>
+                          </Card> */}
                         </div>
                       </Fade>
                     )
