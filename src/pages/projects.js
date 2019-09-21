@@ -95,10 +95,10 @@ export default class projects extends Component {
 
                             <div class="post-content">
                               <div class="category">{node.category}</div>
-                              <h1 class="title">{node.title}</h1>
-                              <h4 class="description">
-                                {node.description.description}
-                              </h4>
+                              <h2 class="title">{node.title}</h2>
+                              <div class="description">
+                                <h4>{node.description.description}</h4>
+                              </div>
 
                               <div class="post-meta">
                                 <span class="timestamp">
