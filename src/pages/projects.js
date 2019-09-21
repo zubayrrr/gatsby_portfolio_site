@@ -100,15 +100,23 @@ export default class projects extends Component {
                                 <h4>{node.description.description}</h4>
                               </div>
 
-                              <div class="post-meta">
-                                <span class="timestamp">
-                                  <a href="www.netlify.com">
-                                    <img src="https://img.icons8.com/material-two-tone/24/000000/external-link.png" />
+                              <div class="post-button mt-3">
+                                <span class="">
+                                  <a
+                                    href="www.netlify.com"
+                                    target="_blank"
+                                    title="Visit"
+                                  >
+                                    <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAABmJLR0QA/wD/AP+gvaeTAAABOklEQVRYhe2WMVLDMBBF33o4BAWUOgFOkYJTMOEAyQz2AJfgBJR2YHKBcAyKMOBwAZWk4BJ4aWxIMjixHDkp8C/l1f6nXUkWdPrvkvWBMLXqkiCLjQCcje1AlGnd+FKBi1kbOtrwbSEwq5tIv/gIAp5WxuAcOG4EIDB7i81lXYD3a/MC/MSHiR0iXGyb10oLwtSOEB6L/DnwuTeAMLFD4KHIrSrcCjzvBaAoe7lyVeFmHplk0xxvAE3MvQE0NYfNx7CeeWpH/PY8B67mkZksxwjc57J6RL0A/LXh1s0BXmNTeZ80bsEuZV9Wowq4mvdSO1UYgId/ga+VNwLwbQ6uLQg4Rat3e+sAWWTuwrEFZZHFu5s7A5QQPoxLHfxB0gFU7gGFfi+1Wx+ZdaTQdwYATsrbq00dvAWdOn0Dt818vA+2DaIAAAAASUVORK5CYII=" />
                                   </a>
                                 </span>
                                 <span class="comments">
-                                  <a href="www.github.com">
-                                    <img src="https://img.icons8.com/material-outlined/24/000000/github.png" />{" "}
+                                  <a
+                                    href="www.github.com"
+                                    target="_blank"
+                                    title="Github"
+                                  >
+                                    <img src="https://img.icons8.com/material-outlined/36/000000/github.png" />
                                   </a>
                                 </span>
                               </div>

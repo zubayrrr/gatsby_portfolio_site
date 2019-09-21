@@ -1,18 +1,3 @@
-.card {
-  background: none;
-  color: #fff;
-  border: 1px solid #fff;
-}
-
-.card a {
-  text-decoration: none;
-}
-.card-img-top {
-  width: 230px;
-  height: 230px;
-  margin: 0 auto;
-}
-
 .text-green {
   color: #1ec503;
 }
@@ -26,14 +11,16 @@ button {
   color: #1ec503;
   border: none;
   padding-bottom: 5px;
+  text-transform: capitalize;
+  transition: all 0.2s ease;
 }
 button:hover {
-  border-bottom: 0.2px solid #fff;
+  background: #1ec503;
+  color: #000000;
 }
 button:focus,
 button:active {
-  animation: flicker 1s infinite alternate;
-  border-bottom: 0.2px solid #fff;
+  background: #1ec503;
   color: #fff;
 }
 
@@ -41,35 +28,7 @@ button:focus {
   outline: none;
 }
 
-:root {
-  --neon-text-color: #1ec503;
-  --neon-border-color: #1ec503;
-}
-
-@keyframes flicker {
-  0%,
-  19%,
-  21%,
-  23%,
-  25%,
-  54%,
-  56%,
-  100% {
-    text-shadow: -0.2rem -0.2rem 1rem #000, 0.2rem 0.2rem 1rem #1ec503,
-      0 0 2rem var(--neon-text-color), 0 0 4rem var(--neon-text-color),
-      0 0 6rem var(--neon-text-color), 0 0 8rem var(--neon-text-color);
-  }
-
-  20%,
-  24%,
-  55% {
-    text-shadow: none;
-    box-shadow: none;
-  }
-}
-
 .categories button {
-  border: 1px solid #fff;
   padding-left: 15px;
   padding-right: 15px;
 }
@@ -171,9 +130,21 @@ button:focus {
   background: #ffffff;
   min-width: 270px;
   height: 470px;
-  transition: all 1s ease;
+  -webkit-box-shadow: 0px 1px 2px 0px rgba(0, 0, 0, 0.15);
+  -moz-box-shadow: 0px 1px 2px 0px rgba(0, 0, 0, 0.15);
+  box-shadow: 0px 1px 2px 0px rgba(0, 0, 0, 0.15);
+  -webkit-transition: all 0.3s linear 0s;
+  -moz-transition: all 0.3s linear 0s;
+  -ms-transition: all 0.3s linear 0s;
+  -o-transition: all 0.3s linear 0s;
+  transition: all 0.3s linear 0s;
 }
-
+.post-module:hover,
+.hover {
+  -webkit-box-shadow: 0px 1px 35px 0px rgba(0, 0, 0, 0.3);
+  -moz-box-shadow: 0px 1px 35px 0px rgba(0, 0, 0, 0.3);
+  box-shadow: 0px 1px 35px 0px rgba(0, 0, 0, 0.3);
+}
 .post-module .thumbnail img,
 .hover .thumbnail img {
   transition: transform 0.5s ease;
@@ -187,7 +158,7 @@ button:focus {
 }
 .post-module .thumbnail {
   background: #000000;
-  height: 270px;
+  height: 400px;
   overflow: hidden;
 }
 
@@ -196,31 +167,33 @@ button:focus {
   bottom: 0;
   background: #ffffff;
   width: 100%;
-  padding: 20px 20px;
-  transition: all 1s ease;
+  padding: 30px;
+  -webkti-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  -webkit-transition: all 0.3s cubic-bezier(0.37, 0.75, 0.61, 1.05) 0s;
+  -moz-transition: all 0.3s cubic-bezier(0.37, 0.75, 0.61, 1.05) 0s;
+  -ms-transition: all 0.3s cubic-bezier(0.37, 0.75, 0.61, 1.05) 0s;
+  -o-transition: all 0.3s cubic-bezier(0.37, 0.75, 0.61, 1.05) 0s;
+  transition: all 0.3s cubic-bezier(0.37, 0.75, 0.61, 1.05) 0s;
 }
-
 .post-module .post-content .category {
   position: absolute;
-  top: -64px;
+  top: -29px;
   left: 0;
   background: #1ec503;
   padding: 5px 10px;
   color: #ffffff;
   font-size: 14px;
-  font-weight: 600;
   text-transform: uppercase;
-}
-
-.post-module:hover .post-content .category {
-  top: -24px;
 }
 .post-module .post-content .title {
   margin: 0;
-  padding: 0 0 10px;
+  padding: 0 0 10px 0;
   color: #161516;
   font-size: 26px;
   font-weight: 700;
+  letter-spacing: 0px;
 }
 .post-module .post-content .description h4 {
   font-size: 14px !important;
@@ -238,4 +211,9 @@ button:focus {
   height: auto !important;
   visibility: visible !important;
   opacity: 1 !important;
+}
+
+.post-button {
+  display: flex;
+  justify-content: space-between;
 }
