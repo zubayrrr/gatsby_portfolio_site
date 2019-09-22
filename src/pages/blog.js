@@ -31,28 +31,31 @@ export default class blog extends Component {
               .reverse()
               .map(post => {
                 return (
-                  <div className="row align-items-center blog  p-5 my-3">
-                    <div className="col-lg-5 col-md-12 col-sm-12 mx-auto blog-1">
-                      <img
+                  <div className="row align-items-center justify-content-center blog  my-5">
+                    <div className="col-lg-5 col-md-12 col-sm-12 blog-1 ">
+                      <div
                         style={{
                           width: "100%",
-                          height: "auto",
+                          height: "306px",
+                          backgroundSize: "cover",
+                          backgroundPosition: "center",
+                          backgroundImage: `url(${post.jetpack_featured_media_url})`,
                         }}
-                        src={post.jetpack_featured_media_url}
                         alt={post.title}
                       />
                     </div>
-                    <div className="col-lg-7 col-md-12 col-sm-12  mx-auto blog-2">
+                    <div className="col-lg-6 col-md-12 col-sm-12 py-5 mt-0 blog-2">
                       <a href={post.slug} className="blog-link">
                         <h1 className="blog-title">{post.title}</h1>
                         <p className="blog-meta" className="text-secondary">
                           Posted on &nbsp;
                           {new Date(post.date).toDateString()}
                         </p>
+
                         <span
                           className="blog-subtitle"
                           dangerouslySetInnerHTML={{
-                            __html: post.excerpt,
+                            __html: post.excerpt.substr(0, 180) + " ...",
                           }}
                         />
                       </a>

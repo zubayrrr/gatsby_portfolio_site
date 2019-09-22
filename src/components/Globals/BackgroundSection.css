@@ -8,3 +8,9 @@
 .text-pokemon {
   font-family: "pokemon";
 }
+
+@media (max-width: 576px) {
+  .masthead {
+    height: 60vh;
+  }
+}
