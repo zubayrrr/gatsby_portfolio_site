@@ -23,13 +23,7 @@ export default function BackgroundSection({
         className={styleClass}
         fluid={img}
       >
-        <h1
-          className="title text-green text-uppercase text-center font-weight-bold px-4 py-2"
-          style={{
-            textShadow: "0px 2px 2px rgba(0, 0, 0, 0.9)",
-            background: "#161516",
-          }}
-        >
+        <h1 className="title text-green text-uppercase text-center font-weight-bold px-4 py-2">
           {title}
         </h1>
         {children}

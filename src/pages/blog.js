@@ -20,18 +20,18 @@ export default class blog extends Component {
       <Layout>
         <SEO title="Blog" />
         <BackgroundSection
-          title="<Blog Articles />"
+          title=" "
           styleClass="background-section-blog"
           img={this.state.BackgroundSection.fluid}
         />
         <Container>
-          <div>
+          <div className="blog-wrapper">
             {this.state.posts
               .slice(0)
               .reverse()
               .map(post => {
                 return (
-                  <div className="row align-items-center justify-content-center blog  my-5">
+                  <div className="row align-items-center justify-content-center blog ">
                     <div className="col-lg-5 col-md-12 col-sm-12 blog-1 ">
                       <div
                         style={{
