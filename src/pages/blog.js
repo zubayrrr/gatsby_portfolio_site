@@ -20,7 +20,7 @@ export default class blog extends Component {
       <Layout>
         <SEO title="Blog" />
         <BackgroundSection
-          title=" "
+          title="Blog Articles"
           styleClass="background-section-blog"
           img={this.state.BackgroundSection.fluid}
         />
