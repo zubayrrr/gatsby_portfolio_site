@@ -4,7 +4,9 @@
   align-items: center;
   justify-content: center;
 }
-@-webkit-keyframes aitf {
+
+/* Animate Background Image */
+@keyframes aitf {
   0% {
     background-position: 0% 50%;
   }
