@@ -41,13 +41,6 @@ body {
 }
 
 @media (max-width: 992px) {
-  .home {
-    position: absolute;
-    top: 60%;
-    left: 50%;
-    transform: translate(-50%, -60%);
-  }
-
   .home h1 {
     font-size: 68px;
   }
