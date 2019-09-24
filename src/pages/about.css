@@ -1,0 +1,12 @@
+.about-wrapper {
+  padding-top: 100px;
+}
+
+@media (max-width: 576px) {
+  .about-wrapper h4 {
+    font-size: 18px;
+  }
+  .about-wrapper div {
+    font-size: 16px;
+  }
+}

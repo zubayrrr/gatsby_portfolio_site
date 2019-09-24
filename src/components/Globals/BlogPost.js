@@ -28,7 +28,7 @@ const BlogPost = ({ data }) => {
 
               <div
                 dangerouslySetInnerHTML={{ __html: post.content }}
-                className="text-left my-5 blogpost_content"
+                className="blogpost_content"
               />
             </div>
           </div>

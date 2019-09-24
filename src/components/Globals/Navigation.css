@@ -58,7 +58,7 @@
 }
 
 .bm-burger-button {
-  position: absolute;
+  position: fixed;
   width: 36px;
   height: 30px;
   left: 36px;

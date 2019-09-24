@@ -5,6 +5,7 @@ import { Container } from "react-bootstrap"
 import { graphql } from "gatsby"
 import "./blog.css"
 import BackgroundSection from "../components/Globals/BackgroundSection"
+import Title from "../components/Globals/Title"
 
 export default class blog extends Component {
   constructor({ data }) {
@@ -26,6 +27,7 @@ export default class blog extends Component {
         />
         <Container>
           <div className="blog-wrapper">
+            <Title title="Blog Articles" />
             {this.state.posts
               .slice(0)
               .reverse()

@@ -1,0 +1,14 @@
+.title-sub-wrapper {
+  display: flex;
+  justify-content: center;
+}
+
+.title-sub {
+  padding: 0 15px 0 15px;
+}
+
+@media (min-width: 576px) {
+  .title-sub {
+    display: none;
+  }
+}

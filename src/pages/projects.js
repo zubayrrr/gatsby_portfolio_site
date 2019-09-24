@@ -6,6 +6,7 @@ import { Card, Row, Container } from "react-bootstrap"
 import Fade from "react-reveal/Fade"
 import "./projects.css"
 import BackgroundSection from "../components/Globals/BackgroundSection"
+import Title from "../components/Globals/Title"
 
 const getCategories = items => {
   let tempItems = items
@@ -55,7 +56,9 @@ export default class projects extends Component {
             styleClass="background-section-blog"
             img={this.state.BackgroundSection.fluid}
           />
+
           <div className="projects">
+            <Title title="Projects I've worked on" />
             <Container>
               <Row className="mb-5">
                 <Fade>

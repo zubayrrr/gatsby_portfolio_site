@@ -4,8 +4,6 @@
   align-items: center;
   justify-content: center;
 }
-
-/* Animate Background Image */
 @-webkit-keyframes aitf {
   0% {
     background-position: 0% 50%;
@@ -15,12 +13,14 @@
   }
 }
 
-.text-pokemon {
-  font-family: "pokemon";
-}
-
 @media (max-width: 576px) {
+  .background-section-blog {
+    display: none !important;
+  }
   .masthead {
-    height: 60vh;
+    height: 0 !important;
+  }
+  .title {
+    display: none;
   }
 }
