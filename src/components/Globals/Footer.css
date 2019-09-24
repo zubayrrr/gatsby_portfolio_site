@@ -1,6 +1,14 @@
 footer {
-  position: absolute;
-  left: 50%;
-  bottom: 0;
-  transform: translate(-50%, 0);
+  background: #1ec503;
+}
+
+footer a {
+  color: #161516;
+  font-size: 18px;
+  text-transform: capitalize;
+  font-weight: 700;
+}
+
+footer a:hover {
+  color: #fff;
 }

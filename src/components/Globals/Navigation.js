@@ -33,7 +33,7 @@ export default class Navigation extends Component {
       <>
         <Menu
           {...this.props}
-          style={{ zIndex: "10000000000000000000000000000" }}
+          style={{ zIndex: "1000000000000" }}
           right
           customBurgerIcon={
             <img

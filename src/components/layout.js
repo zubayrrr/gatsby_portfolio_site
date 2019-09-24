@@ -2,6 +2,7 @@ import React from "react"
 import { useStaticQuery, graphql } from "gatsby"
 import "./layout.css"
 import Navigation from "./Globals/Navigation"
+import Footer from "./Globals/Footer"
 
 const Layout = ({ children }) => {
   const data = useStaticQuery(graphql`
@@ -18,6 +19,7 @@ const Layout = ({ children }) => {
     <div id="App">
       <Navigation pageWrapId={"page-wrap"} outerContainerId={"App"} />
       <div id="page-wrap">{children}</div>
+      <Footer />
     </div>
   )
 }

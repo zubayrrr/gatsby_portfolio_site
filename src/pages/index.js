@@ -11,19 +11,24 @@ import { Link } from "gatsby"
 const IndexPage = () => (
   <Layout className="svg-bg">
     <SEO title="Home" />
-    <div className="container home text-center">
-      <Fade>
-        <h1 className="display-1 ">
-          Hello there<span>,</span>
-        </h1>
-      </Fade>
-      <Fade bottom>
-        <h4>I'm Zubayr Ali, React developer, AWS solutions architect.</h4>
-        <div className="mt-4 subnav">
-          <a href="">Read Resume</a>, &nbsp;
-          <Link to="/projects">View Projects &rarr; </Link>
-        </div>
-      </Fade>
+    <div
+      className="container home text-center"
+      style={{ height: "100vh", top: "50%" }}
+    >
+      <div>
+        <Fade>
+          <h1 className="display-1 ">
+            Hello there<span>,</span>
+          </h1>
+        </Fade>
+        <Fade bottom>
+          <h4>I'm Zubayr Ali, React developer, AWS solutions architect.</h4>
+          <div className="mt-4 subnav">
+            <a href="">Read Resume</a>, &nbsp;
+            <Link to="/projects">View Projects &rarr; </Link>
+          </div>
+        </Fade>
+      </div>
     </div>
   </Layout>
 )
