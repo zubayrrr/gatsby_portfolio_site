@@ -1,6 +1,9 @@
 body {
   overflow-x: hidden;
 }
+.blogpost-wrapper {
+  padding-top: 100px;
+}
 .blogpost_img {
   width: 90%;
   height: auto;

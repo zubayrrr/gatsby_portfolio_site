@@ -51,7 +51,7 @@ export default class projects extends Component {
         <Layout>
           <SEO title="Projects" />
           <BackgroundSection
-            title="Projects that I've worked on"
+            title="Projects I've worked on"
             styleClass="background-section-blog"
             img={this.state.BackgroundSection.fluid}
           />
@@ -86,21 +86,21 @@ export default class projects extends Component {
                       <Fade>
                         <div
                           key={node.id}
-                          className="col-11 col-md-4 my-3 d-flex mx-auto  "
+                          className="col-11 col-lg-4 col-md-6 my-3 d-flex mx-auto  "
                         >
-                          <div class="post-module hover">
-                            <div class="thumbnail">
+                          <div class="post-module mx-auto hover">
+                            <div class="thumbnail rounded">
                               <img src={node.image.fixed.src} />
                             </div>
 
-                            <div class="post-content">
+                            <div class="post-content rounded-bottom">
                               <div class="category">{node.category}</div>
                               <h2 class="title">{node.title}</h2>
                               <div class="description">
                                 <h4>{node.description.description}</h4>
                               </div>
 
-                              <div class="post-button mt-3">
+                              <div class="post-button mt-3 ">
                                 <span class="">
                                   <a
                                     href="www.netlify.com"
