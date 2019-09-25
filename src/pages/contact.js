@@ -10,7 +10,6 @@ export default class contact extends Component {
             name="contact"
             method="post"
             data-netlify="true"
-            data-netlify-honeypot="bot-field"
             style={{ marginTop: "100px" }}
           >
             <input type="hidden" class="form-control" name="bot-field" />
