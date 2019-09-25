@@ -9,7 +9,7 @@ export default class contact extends Component {
           <form
             name="contact"
             method="POST"
-            netlify-honeypot="bot-field"
+            data-netlify-honeypot="bot-field"
             data-netlify="true"
             data-netlify-recaptcha="true"
             style={{ marginTop: "100px" }}
@@ -50,25 +50,16 @@ export default class contact extends Component {
               </div>
             </div>
             <div data-netlify-recaptcha="true"></div>
-            <ul
-              className="actions"
-              style={{
-                display: "flex",
-                justifyContent: "space-between",
-                listStyle: "none",
-              }}
-            >
-              <li>
-                <input
-                  type="submit"
-                  value="Send Message"
-                  className="form-button"
-                />
-              </li>
-              <li>
-                <input type="reset" value="Clear" />
-              </li>
-            </ul>
+
+            <p className="text-center">
+              <button
+                type="submit"
+                value="Send Message"
+                className="form-button"
+              >
+                Send
+              </button>
+            </p>
           </form>
         </div>
       </Layout>
