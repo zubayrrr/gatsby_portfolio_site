@@ -8,11 +8,10 @@ export default class contact extends Component {
         <div className="container">
           <form
             name="contact"
-            method="post"
+            method="POST"
             data-netlify="true"
             style={{ marginTop: "100px" }}
           >
-            <input type="hidden" class="form-control" name="bot-field" />
             <input
               type="hidden"
               class="form-control"
