@@ -12,23 +12,23 @@ export default class contact extends Component {
             data-netlify="true"
             style={{ marginTop: "100px" }}
           >
-            <input
-              type="hidden"
-              class="form-control"
-              name="form-name"
-              value="contact"
-            />
+            <input type="hidden" name="form-name" value="contact" />
 
             <div className="form-group">
               <div className="field half first">
                 <label htmlFor="name">Name</label>
-                <input type="text" class="form-control" name="name" id="name" />
+                <input
+                  type="text"
+                  className="form-control"
+                  name="name"
+                  id="name"
+                />
               </div>
               <div className="field half">
                 <label htmlFor="email">Email</label>
                 <input
                   type="text"
-                  class="form-control"
+                  className="form-control"
                   name="email"
                   id="email"
                 />
@@ -40,7 +40,7 @@ export default class contact extends Component {
                 <label htmlFor="message">Message</label>
                 <textarea
                   name="message"
-                  class="form-control"
+                  className="form-control"
                   id="message"
                   rows="6"
                 />
