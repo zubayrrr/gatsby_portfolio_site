@@ -12,3 +12,7 @@ footer a {
 footer a:hover {
   color: #fff;
 }
+
+.poweredby img {
+  width: 32px;
+}

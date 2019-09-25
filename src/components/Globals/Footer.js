@@ -1,26 +1,34 @@
 import React, { Component } from "react"
 import { Link } from "gatsby"
 import "./Footer.css"
+import gatsby_img from "../../images/gatsby.png"
+import contentful_img from "../../images/contentful.png"
+import wordpress_img from "../../images/wordpress.jpg"
+import netlify_img from "../../images/netlify.png"
 
 export default class Footer extends Component {
   render() {
     return (
       <footer class="page-footer">
         <div class="container ">
-          <div class="row pt-5 mt-5 align-items-center">
+          <div className="text-center"></div>
+          <div class="row pt-3 mt-5 align-items-center">
             <div class="col-md-6 text-center text-lg-left text-dark">
-              <ul class="list-unstyled ">
-                <li>
+              <ul class="list-inline ">
+                <li className="list-inline-item">
                   <Link to="/">Home</Link>
                 </li>
-                <li>
+                <li className="list-inline-item">
                   <Link to="/projects">Projects</Link>
                 </li>
-                <li>
+                <li className="list-inline-item">
                   <Link to="/blog">Blog</Link>
                 </li>
-                <li>
+                <li className="list-inline-item">
                   <Link to="/about">About</Link>
+                </li>
+                <li className="list-inline-item">
+                  <Link to="/contact">Contact</Link>
                 </li>
               </ul>
             </div>
@@ -46,6 +54,40 @@ export default class Footer extends Component {
             </div>
           </div>
         </div>
+
+        <div
+          style={{
+            display: "flex",
+            justifyContent: "center",
+            alignItems: "center",
+            background: "#161516",
+            padding: "15px 20px",
+          }}
+          className="mb-2 poweredby"
+        >
+          <ul
+            className="list-inline"
+            style={{
+              marginBlockStart: "0",
+              marginBlockEnd: "0",
+              paddingInlineStart: "0",
+            }}
+          >
+            <li className="list-inline-item">
+              <img src={gatsby_img} alt="Gatsbyjs" />
+            </li>
+            <li className="list-inline-item">
+              <img src={contentful_img} alt="Contentful" />
+            </li>
+            <li className="list-inline-item">
+              <img src={wordpress_img} alt="Wordpress" />
+            </li>
+            <li className="list-inline-item">
+              <img src={netlify_img} alt="Netlify" />
+            </li>
+          </ul>
+        </div>
+
         <div>
           <h1 className="text-center" style={{ fontWeight: "700" }}>
             Zubayr

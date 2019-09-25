@@ -1,0 +1,76 @@
+import React, { Component } from "react"
+import Layout from "../components/layout"
+
+export default class contact extends Component {
+  render() {
+    return (
+      <Layout>
+        <div className="container">
+          <form
+            name="contact"
+            method="post"
+            data-netlify="true"
+            data-netlify-honeypot="bot-field"
+            style={{ marginTop: "100px" }}
+          >
+            <input type="hidden" class="form-control" name="bot-field" />
+            <input
+              type="hidden"
+              class="form-control"
+              name="form-name"
+              value="contact"
+            />
+
+            <div className="form-group">
+              <div className="field half first">
+                <label htmlFor="name">Name</label>
+                <input type="text" class="form-control" name="name" id="name" />
+              </div>
+              <div className="field half">
+                <label htmlFor="email">Email</label>
+                <input
+                  type="text"
+                  class="form-control"
+                  name="email"
+                  id="email"
+                />
+              </div>
+            </div>
+
+            <div className="form-group">
+              <div className="field">
+                <label htmlFor="message">Message</label>
+                <textarea
+                  name="message"
+                  class="form-control"
+                  id="message"
+                  rows="6"
+                />
+              </div>
+            </div>
+
+            <ul
+              className="actions"
+              style={{
+                display: "flex",
+                justifyContent: "space-between",
+                listStyle: "none",
+              }}
+            >
+              <li>
+                <input
+                  type="submit"
+                  value="Send Message"
+                  className="form-button"
+                />
+              </li>
+              <li>
+                <input type="reset" value="Clear" />
+              </li>
+            </ul>
+          </form>
+        </div>
+      </Layout>
+    )
+  }
+}
