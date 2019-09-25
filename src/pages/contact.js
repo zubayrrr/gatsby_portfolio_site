@@ -33,6 +33,7 @@ export default class contact extends Component {
             name="contact"
             method="POST"
             data-netlify="true"
+            data-netlify-recaptcha="true"
           >
             <input type="hidden" name="form-name" value="contact" />
 
@@ -67,7 +68,7 @@ export default class contact extends Component {
               />
             </div>
 
-            <div data-netlify-recaptcha />
+            <div data-netlify-recaptcha="true" />
 
             <button type="submit" className="form-button">
               Send
