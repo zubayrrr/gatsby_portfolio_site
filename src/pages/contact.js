@@ -49,7 +49,7 @@ export default class contact extends Component {
                 />
               </div>
             </div>
-
+            <div data-netlify-recaptcha="true"></div>
             <ul
               className="actions"
               style={{
@@ -69,7 +69,6 @@ export default class contact extends Component {
                 <input type="reset" value="Clear" />
               </li>
             </ul>
-            <div data-netlify-recaptcha="true"></div>
           </form>
         </div>
       </Layout>
