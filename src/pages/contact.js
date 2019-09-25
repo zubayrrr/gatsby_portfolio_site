@@ -1,21 +1,39 @@
 import React, { Component } from "react"
 import Layout from "../components/layout"
+import Title from "../components/Globals/Title"
+import BackgroundSection from "../components/Globals/BackgroundSection"
 
 export default class contact extends Component {
+  constructor({ data }) {
+    super(data)
+    this.state = {
+      BackgroundSection: data.BackgroundSection.childImageSharp,
+    }
+  }
   render() {
     return (
       <Layout>
-        <div className="container">
+        <BackgroundSection
+          title="Contact me"
+          styleClass="about-background"
+          img={this.state.BackgroundSection.fluid}
+        />
+        <Title title="Get in touch" />
+        <div
+          style={{
+            height: "100vh",
+            display: "flex",
+            justifyContent: "center",
+            alignContent: "center",
+          }}
+        >
           <form
+            style={{ paddingTop: "100px" }}
+            className="w-50"
             name="contact"
             method="POST"
-            data-netlify-honeypot="bot-field"
-            netlify-honeypot="bot-field"
             data-netlify="true"
-            style={{ marginTop: "100px" }}
           >
-            <input hidden type="hidden" name="bot-field" />
-
             <input type="hidden" name="form-name" value="contact" />
 
             <div className="form-group">
@@ -60,3 +78,15 @@ export default class contact extends Component {
     )
   }
 }
+
+export const query = graphql`
+  {
+    BackgroundSection: file(relativePath: { eq: "contactme.jpg" }) {
+      childImageSharp {
+        fluid {
+          ...GatsbyImageSharpFluid
+        }
+      }
+    }
+  }
+`

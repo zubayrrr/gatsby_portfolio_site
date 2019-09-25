@@ -14,20 +14,20 @@ export default class Footer extends Component {
           <div className="text-center"></div>
           <div class="row pt-3 mt-5 align-items-center">
             <div class="col-md-6 text-center text-lg-left text-dark">
-              <ul class="list-inline ">
-                <li className="list-inline-item">
+              <ul class="list-unstyled">
+                <li>
                   <Link to="/">Home</Link>
                 </li>
-                <li className="list-inline-item">
+                <li>
                   <Link to="/projects">Projects</Link>
                 </li>
-                <li className="list-inline-item">
+                <li>
                   <Link to="/blog">Blog</Link>
                 </li>
-                <li className="list-inline-item">
+                <li>
                   <Link to="/about">About</Link>
                 </li>
-                <li className="list-inline-item">
+                <li>
                   <Link to="/contact">Contact</Link>
                 </li>
               </ul>
