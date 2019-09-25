@@ -11,9 +11,10 @@ export default class contact extends Component {
             method="POST"
             netlify-honeypot="bot-field"
             data-netlify="true"
+            data-netlify-recaptcha="true"
             style={{ marginTop: "100px" }}
           >
-            <input type="hidden" name="bot-field" />
+            <input type="hidden" name="bot-field" style={{ opacity: "0" }} />
             <input type="hidden" name="form-name" value="contact" />
 
             <div className="form-group">
@@ -68,6 +69,7 @@ export default class contact extends Component {
                 <input type="reset" value="Clear" />
               </li>
             </ul>
+            <div data-netlify-recaptcha="true"></div>
           </form>
         </div>
       </Layout>
