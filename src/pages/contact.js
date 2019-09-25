@@ -32,6 +32,7 @@ export default class contact extends Component {
             <form
               className="mx-auto"
               name="contact"
+              action="/success"
               method="POST"
               data-netlify="true"
             >

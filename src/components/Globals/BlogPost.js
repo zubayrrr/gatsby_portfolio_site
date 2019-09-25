@@ -1,5 +1,5 @@
 import React from "react"
-import { graphql } from "gatsby"
+import { graphql, Link } from "gatsby"
 import "./BlogPost.css"
 import Layout from "../layout"
 
@@ -30,6 +30,7 @@ const BlogPost = ({ data }) => {
                 dangerouslySetInnerHTML={{ __html: post.content }}
                 className="blogpost_content"
               />
+              <Link to="/blog">Back to Blog page</Link>
             </div>
           </div>
         </div>

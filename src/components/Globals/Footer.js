@@ -75,7 +75,7 @@ export default class Footer extends Component {
             background: "#161516",
             padding: "15px 20px",
           }}
-          className="mb-2 poweredby"
+          className=" poweredby"
         >
           <ul
             className="list-inline"
@@ -100,20 +100,7 @@ export default class Footer extends Component {
           </ul>
         </div>
 
-        <div>
-          <h1 className="text-center" style={{ fontWeight: "700" }}>
-            Zubayr
-            <span
-              style={{
-                color: "#161516",
-              }}
-            >
-              Ali
-            </span>
-          </h1>
-        </div>
-
-        <div class="footer-copyright text-center py-3 small">
+        <div class="footer-copyright text-center py-2 small">
           © {new Date().getFullYear()} Zubayr Ali
         </div>
       </footer>
