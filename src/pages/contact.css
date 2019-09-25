@@ -1,0 +1,42 @@
+form {
+  width: 60%;
+}
+
+.form-control {
+  background: transparent !important;
+  color: #fff !important;
+  font-size: 20px !important;
+}
+
+.form input {
+  height: 45px !important;
+}
+
+.form-control:focus,
+.form-control:active {
+  border-color: transparent !important;
+  box-shadow: none !important;
+  border-bottom: 5px solid #1ec503 !important;
+}
+
+.form-button {
+  padding: 10px 40px;
+  background: #1ec503;
+  color: #fff;
+}
+
+.form-button:hover {
+  color: #161516;
+}
+
+@media (max-width: 992px) {
+  form {
+    width: 100% !important;
+  }
+}
+
+@media (max-width: 576px) {
+  .form textarea {
+    height: 120px !important;
+  }
+}
