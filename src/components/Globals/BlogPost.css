@@ -22,7 +22,8 @@ body {
 }
 
 .blogpost_content img {
-  width: 50%;
+  width: 80%;
+  margin-bottom: 10px;
   height: auto;
 }
 

@@ -14,21 +14,30 @@ export default class contact extends Component {
   render() {
     return (
       <Layout>
-        <BackgroundSection
-          title="Contact me"
-          styleClass="about-background"
-          img={this.state.BackgroundSection.fluid}
-        />
+        <div className="">
+          <BackgroundSection
+            title="Get in touch"
+            styleClass=""
+            img={this.state.BackgroundSection.fluid}
+          />
+        </div>
 
         <div
           style={{
             height: "100vh",
-            paddingTop: "100px",
+            top: "50%",
+            display: "flex",
+            justifyContent: "center",
+            alignItems: "center",
+            margin: "60px 0 0 0",
           }}
           className="form"
         >
-          <Title title="Get in touch" />
           <div className="container">
+            <Title title="Get in touch" />
+            <p className="text-center">
+              *Drop me a message, I'll get back to you ASAP.
+            </p>
             <form
               className="mx-auto"
               name="contact"

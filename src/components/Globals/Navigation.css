@@ -1,21 +1,9 @@
 .nav-link {
-  font-family: "pokemon";
   color: #fff !important;
-}
-.navbar-brand {
-  color: #fff !important;
-  font-weight: bold;
-  text-transform: uppercase;
-  letter-spacing: 3px;
-  font-size: 28px !important;
-}
-
-.navbar-brand span {
-  color: #1ec503;
 }
 
 .nav-link {
-  font-size: 14px;
+  font-size: 18px;
   color: #1ec503 !important;
 }
 .nav .nav-link:hover,
@@ -71,7 +59,11 @@
 }
 
 .bm-cross {
-  background: #bdc3c7;
+  background: #1ec503;
+}
+
+.bm-cross-button:hover {
+  cursor: pointer !important;
 }
 
 .bm-menu-wrap {
