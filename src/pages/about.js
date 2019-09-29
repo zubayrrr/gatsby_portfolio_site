@@ -30,7 +30,7 @@ export default class about extends Component {
             <Title title="About me" />
             <div className="row justify-content-center">
               <div className="col-lg-8">
-                <Fade top>
+                <Fade>
                   <h4 className="font-weight-bold py-2">
                     My Name is Zubayr, I'm 20 years old, self taught React
                     Developer and AWS solutions architect.

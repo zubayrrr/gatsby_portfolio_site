@@ -22,7 +22,7 @@ const IndexPage = () => (
           </h1>
         </Fade>
         <Fade bottom>
-          <h4>I'm Zubayr Ali, React developer, AWS solutions architect.</h4>
+          <h4>I'm Zubayr Ali, Front-end and Blockchain developer.</h4>
           <div className="mt-4 subnav">
             <a href="">Read Resume</a>, &nbsp;
             <Link to="/projects">View Projects &rarr; </Link>

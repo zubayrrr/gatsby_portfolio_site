@@ -58,6 +58,7 @@ export default class contact extends Component {
                       className="form-control"
                       name="name"
                       id="name"
+                      required
                     />
                   </div>
                   <div className="field half">
@@ -67,6 +68,7 @@ export default class contact extends Component {
                       className="form-control"
                       name="email"
                       id="email"
+                      required
                     />
                   </div>
                   <div className="field">
@@ -76,6 +78,7 @@ export default class contact extends Component {
                       className="form-control"
                       id="message"
                       rows="6"
+                      required
                     />
                   </div>
                 </div>
