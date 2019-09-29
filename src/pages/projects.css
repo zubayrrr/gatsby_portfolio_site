@@ -193,7 +193,7 @@ button:focus {
   }
 }
 
-@media (max-width: 380px) {
+@media (max-width: 385px) {
   .navbar-brand {
     font-size: 18px !important;
   }
@@ -206,20 +206,23 @@ button:focus {
   }
 }
 
-@media (max-width: 360px) {
+@media (max-width: 374px) {
   .navbar-brand {
     font-size: 16px !important;
   }
+  .categories {
+    margin: auto 0 !important;
+  }
   .categories button {
-    padding-left: 8px;
-    padding-right: 8px;
+    padding-left: 4px;
+    padding-right: 4px;
   }
 }
 
-@media (max-width: 341px) {
+@media (max-width: 364px) {
   .categories button {
-    padding-left: 6px;
-    padding-right: 6px;
+    padding-left: 3px;
+    padding-right: 3px;
   }
 }
 
